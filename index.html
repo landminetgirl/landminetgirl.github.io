@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="https://unpkg.com/98.css">
     <script>
       async function sendMessageTelegram(message) {
-        let f1 = await fetch(`https://api.telegram.org/bot8650152782:AAGOsJGXej_SF4Q1WHc7QXuEjNakzJzokEc/sendMessage?chat_id=6551174681&text=${document.getElementById("ama").value}`);
-        let f2 = await f1.text();
-        document.getElementById("ama").value="";
+          let f1 = await fetch("https://lhi78nqgk3.execute-api.eu-west-1.amazonaws.com/ama", {
+              method: "POST",
+              body: JSON.stringify({
+                  message: document.getElementById("ama").value
+              })
+          });
+          let f2 = await f1.text();
+          document.getElementById("ama").value = "";
       }
     </script>
   </head>
@@ -19,11 +24,11 @@
       <div class="sidewall-l"></div>
       <div class="middle">
         <img src="./graphics/name_cooltext.png" class="cool-logo" />
-        <br/>
+        <br/><br/>
         <div class="grid-1">
           <div class="window" style="margin: 32px; width: 250px; height: fit-content;">
             <div class="title-bar">
-              <div class="title-bar-text">
+              <div class="title-bar-text no-select">
                 Ask Me Anything!
               </div>
 
@@ -33,9 +38,9 @@
                 <button aria-label="Close"></button>
               </div>
             </div>
-            <div class="window-body" style="text-align: left;">
+            <div class="window-body" style="text-align: left; overflow: hidden;">
               <p>Ask me anything about myself!!!<br/><br/>
-              <input type="text" style="width: 100%" id="ama" /><br/><br/>
+              <textarea type="text" id="ama" rows="4" style="width: 100%; box-sizing: border-box; resize: none;"></textarea><br/><br/>
               <section class="field-row" style="justify-content: flex-end">
                 <button onclick="sendMessageTelegram()">OK</button>
               </section>
@@ -43,7 +48,7 @@
           </div>
           <div class="window" style="margin: 32px; width: 250px; height: fit-content;">
             <div class="title-bar">
-              <div class="title-bar-text">
+              <div class="title-bar-text no-select">
                 All About Me!
               </div>
 
@@ -57,10 +62,10 @@
               <p>Hiya!!! I'm a 21 year old jirai trans girl living in Atlanta, GA! 
                 I'm currently unemployed and emotionally a wreck but that'll never stop me from being your angel <3<br/><br>
                 <b>໒꒱ིྀ༝⁺ Stats For Nerds </b><br/>
-                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Food</b> Pasta dishes ೀ<br/>
-                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Dessert</b> Cake ೀ<br/>
-                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Sanrio Character</b> Cinnamoroll ೀ<br/>
-                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Song</b> your pet - niomiautemn ೀ<br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Food</b> Pasta<br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Dessert</b> Cake<br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Sanrio Character</b> Cinnamoroll<br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Song</b> your pet by niomi<br/>
               </p>
             </div>
           </div>
