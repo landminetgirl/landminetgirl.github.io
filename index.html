@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The web site of landminetgirl</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <script>
+      async function sendMessageTelegram(message) {
+        let f1 = await fetch(`https://api.telegram.org/bot8650152782:AAGOsJGXej_SF4Q1WHc7QXuEjNakzJzokEc/sendMessage?chat_id=6551174681&text=${document.getElementById("ama").value}`);
+        let f2 = await f1.text();
+        document.getElementById("ama").value="";
+      }
+    </script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="sidewall-l"></div>
+      <div class="middle">
+        <img src="./graphics/name_cooltext.png" class="cool-logo" />
+        <br/>
+        <div class="grid-1">
+          <div class="window" style="margin: 32px; width: 250px; height: fit-content;">
+            <div class="title-bar">
+              <div class="title-bar-text">
+                Ask Me Anything!
+              </div>
+
+              <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body" style="text-align: left;">
+              <p>Ask me anything about myself!!!<br/><br/>
+              <input type="text" style="width: 100%" id="ama" /><br/><br/>
+              <section class="field-row" style="justify-content: flex-end">
+                <button onclick="sendMessageTelegram()">OK</button>
+              </section>
+            </div>
+          </div>
+          <div class="window" style="margin: 32px; width: 250px; height: fit-content;">
+            <div class="title-bar">
+              <div class="title-bar-text">
+                All About Me!
+              </div>
+
+              <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+              </div>
+            </div>
+            <div class="window-body" style="text-align: left" >
+              <p>Hiya!!! I'm a 21 year old jirai trans girl living in Atlanta, GA! 
+                I'm currently unemployed and emotionally a wreck but that'll never stop me from being your angel <3<br/><br>
+                <b>໒꒱ིྀ༝⁺ Stats For Nerds </b><br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Food</b> Pasta dishes ೀ<br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Dessert</b> Cake ೀ<br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Sanrio Character</b> Cinnamoroll ೀ<br/>
+                ✖ <b style="margin-left: 5px; margin-right: 3px;">Favorite Song</b> your pet - niomiautemn ೀ<br/>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidewall-r"></div>
+    </div>
+  </body>
+</html>
