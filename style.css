@@ -11,6 +11,10 @@ body {
   font-family: Verdana;
 }
 
+.no-select {
+  user-select: none;
+}
+
 .sidewall-l {
   background-image: url('./graphics/starry_left.gif');
   width: 500px;
@@ -54,6 +58,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  scale: 1.15;
 
   @media screen and (max-width: 767px) {
     flex-direction: column;
